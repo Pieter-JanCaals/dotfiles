@@ -2,6 +2,9 @@
 # ---
 #
 alias tr="terraform"
+alias tf="terraform"
+alias bat="batcat"
+alias cat="batcat"
 
 # Windows applications
 alias winstart="cmd.exe /C start"
@@ -13,6 +16,10 @@ alias ngrok="clear && psh ngrok.exe"
 alias ls="exa --icons --group-directories-first"
 alias ll="exa --icons --group-directories-first -l"
 alias la="exa --icons --group-directories-first -l -a"
+alias tree="exa --tree --group-directories-first --icons"
+alias trl="exa --tree --group-directories-first --icons --long"
+alias tra="exa --tree --group-directories-first --icons -a --level=2"
+alias tral="exa --tree --group-directories-first --icons -l -a --level=2"
 
 # Movement
 alias ..="cd .."
@@ -24,3 +31,4 @@ alias editzsh="vim ~/.zshrc"
 alias codezsh="code ~/.zsh/"
 alias sourcezsh="source ~/.zshrc"
 alias editstarship="code ~/.config/starship.toml"
+

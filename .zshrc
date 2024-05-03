@@ -1,9 +1,9 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/home/caalspi/.local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
 # source /home/caalspi/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export NVM_DIR="/home/caalspi/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
@@ -22,3 +22,12 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh --cmd cd)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Enable bash autocompletions in zsh
+autoload -U +X bashcompinit && bashcompinit
+
+## Enable AZ CLI completion
+[[ -f ~/.zsh/az.completion ]] && source ~/.zsh/az.completion
+
+## Enable terraform completion
+complete -o nospace -C /usr/bin/terraform terraform
